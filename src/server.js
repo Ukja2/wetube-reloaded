@@ -12,6 +12,7 @@ const logger = morgan("dev");
 
 
 app.set("view engine", "pug");
+app.set("views", process.cwd() + "/src/views" )
 app.use(logger);
 //requests로 받고 respone을 통해 반드시 응답해줘야 됨 안그러면 브라우저는 계속해서 로딩 중일 것임//
 app.use("/", globalRouter);
